@@ -13,24 +13,23 @@
 <div class="weather-app-wrapper">
 <div class="weather-app">
    
-<form id="search-form">
+<form id="search-form" class="search-form">
     <div class="row" >
-        <div class="col-6"><input type="text" class="form-control" id="city-input" placeholder="Enter City"/></div>
-        <div class="col-3"><button type="submit" value="Search" class="btn btn-primary" id="search-button" >Search</button></div> 
-        <div class="col-2"><button type="submit" value="Current" class="btn btn-primary" id="current-button" >Current</button></div>                  
+        <div class="col-5"><input type="text" class="form-control" id="city-input" placeholder="Enter City"/></div>
+        <div class="col-3"><button type="submit" value="Search" class="btn btn-search" id="search-button" >Search</button></div> 
+        <div class="col-2"><button type="submit" value="Current" class="btn btn-current" id="current-button" >Current</button></div>                  
     </div> 
 </form>
 
 
     <h1><span id="city"></span>, <span id="country"> </span></h1>
     <ul>
-        <li id="date"></li>
-        <li id="description">Clear</li>
+        <li id="description" class="weather-description">Clear</li>
     </ul>
 
     <div class="row">
 
-        <div class="col-6">
+        <div class="col-12">
             <img class="weather-icon" src="img/Snow.gif" alt="Weather" id="icon">
             <span class="degree" id="temperature"></span> 
                 <span class="celsius-far"> 
@@ -40,18 +39,20 @@
             </span>
         </div>
 
-        <div class="col-6">
+            
+        <div class="col-12 hum-wind">
             <ul>
                 <li>Humidity: <span id="humidity"></span>%</li>
                 <li>Wind: <span id="wind"></span> km/h</li>
+                <li id="date" class="last-update"></li>
             </ul>        
-
         </div>
+      
 
+            
     </div>
 
-<div class="row" id="forecast">
-</div>
+<div class="row" id="forecast"></div>
 
 
 

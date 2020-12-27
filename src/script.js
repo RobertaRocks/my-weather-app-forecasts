@@ -47,7 +47,7 @@ function formatDate (timestamp) {
         let fulldate= date.getDate();
         let months = [ "January", "February", "March", "April","May","June", "July", "August", "September","October","November", "December"];
         let month = months[date.getMonth()];
-        return `Last updated: ${day}, ${fulldate} ${month}, ${formatHours(timestamp)}`;
+        return `Updated: ${day}, ${fulldate} ${month}, ${formatHours(timestamp)}`;
 }
 
 // forma hours for foecasts
@@ -118,8 +118,7 @@ forecastElement.innerHTML += `
     <ul>
         <li><span class="hour" id="hour-for"> ${formatHours(forecast.dt * 1000)}</span></li>
         <li> <img class="weather-icon-for" src="img/${forecast.weather[0].main}.gif" id="icon-for"></li>
-        <li class="temp-for"><strong class="max-temp" id="temp-max-for"> ${Math.round(forecast.main.temp_max)}° </strong> 
-        <span class="min-temp" id="temp-min-for"> ${Math.round(forecast.main.temp_min)}° </span></li>
+        <li class="temp-for"><strong class="max-temp" id="temp-max-for"> ${Math.round(forecast.main.temp_max)}° </strong></li>
     </ul>
     </div>`;
 }}
